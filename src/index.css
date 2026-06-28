@@ -2,12 +2,90 @@
 @import "tailwindcss";
 
 @theme {
- 
+  --font-heading: "Plus Jakarta Sans", sans-serif;
+  --font-body: "Quicksand", sans-serif;
+  --color-primary: #864e5a;
+  --color-primary-container: #ffb7c5;
+  --color-secondary: #74593f;
+  --color-secondary-container: #fed9b8;
+  --color-tertiary: #386754;
+  --color-tertiary-container: #a3d5bd;
+  --color-surface: #fbf9f1;
+  --color-surface-container: #f0eee6;
+  --color-inverted: #1b1c17;
+  --color-outline: #837375;
+  --text-muted: #514345;
+}
 
-    --font-heading: "Plus Jakarta Sans", sans-serif;
-    --font-body: "Quicksand", sans-serif;
-    --color-primary: #fbbf24;
-    --color-secondary: #EAE8E0;
-    --color-inverted:#30312C;
-    --color-outline:#837375;
+@layer base {
+  html {
+    color: var(--color-inverted);
+    font-family: var(--font-body);
+    background-color: var(--color-surface);
+  }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background-color: var(--color-surface);
+  }
+
+  .font-heading {
+    font-family: var(--font-heading);
+  }
+
+  .bg-sprinkle {
+    background-color: var(--color-surface);
+    background-image: radial-gradient(
+      circle,
+      rgba(134, 78, 90, 0.16) 1px,
+      rgba(255, 183, 197, 0.18) 1px,
+      transparent 2px
+    );
+    background-size: 30px 30px;
+  }
+
+  .shadow-soft {
+    box-shadow: 0 24px 64px rgba(134, 78, 90, 0.12);
+  }
+
+  .border-soft {
+    border-color: rgba(131, 115, 117, 0.18);
+  }
+}
+
+@layer utilities {
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-float-slow {
+    animation: float 10s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-14px);
+    }
+  }
+
+  @keyframes float-wide {
+    0%,
+    100% {
+      transform: translate(0, 0);
+    }
+    25% {
+      transform: translate(10px, -10px);
+    }
+    50% {
+      transform: translate(0, -18px);
+    }
+    75% {
+      transform: translate(-10px, -10px);
+    }
+  }
 }
