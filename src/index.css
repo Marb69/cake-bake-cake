@@ -8,15 +8,8 @@
   --color-primary-container: #ffb7c5;
   --color-secondary: #74593f;
   --color-secondary-container: #fed9b8;
-  --color-tertiary: #386754;
-  --color-tertiary-container: #a3d5bd;
-  --color-surface: #fbf9f1;
-  --color-surface-container: #f0eee6;
-  --color-inverted: #1b1c17;
-  --color-outline: #837375;
-  --text-muted: #514345;
-}
 
+}
 @layer base {
   html {
     color: var(--color-inverted);
