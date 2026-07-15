@@ -2,96 +2,10 @@ import { useState, useMemo } from "react";
 import { useNavigate } from "react-router-dom";
 import { Search, X, ArrowRight, Heart } from "lucide-react";
 
-import birthdayCake from "../assets/image/birthday_cake.png";
-import weddingCake from "../assets/image/wedding_cake.png";
-import cuteCake from "../assets/image/cute_cake.png";
 
-const galleryItems = [
-  {
-    id: "celebration-sparkle",
-    title: "Celebration Sparkle",
-    category: "Birthday",
-    image: birthdayCake,
-    description: "A fun-filled, colorful birthday cake decorated with pastel sprinkles, vanilla buttercream, and sparkling edible glitter toppers.",
-    details: "Vanilla sponge layered with fresh strawberry buttercream and a signature strawberry compote filling.",
-    priceRange: "$65 - $95",
-    tiers: 1,
-    shape: "Circle",
-    flavor: "Vanilla",
-    frosting: "Buttercream",
-    rating: 4.9,
-  },
-  {
-    id: "everlasting-love",
-    title: "Everlasting Love",
-    category: "Wedding",
-    image: weddingCake,
-    description: "An elegant, tiered white cake featuring delicate sugar lace ribbons, hand-piped borders, and fresh floral accents.",
-    details: "Dense red velvet sponge layered with smooth, tangy cream cheese frosting and edible gold details.",
-    priceRange: "$220 - $350",
-    tiers: 3,
-    shape: "Circle",
-    flavor: "Red Velvet",
-    frosting: "Buttercream",
-    rating: 5.0,
-  },
-  {
-    id: "cuddly-confection",
-    title: "Cuddly Confection",
-    category: "Cute Cake",
-    image: cuteCake,
-    description: "A super cute bear-themed cake with realistic fondant ears, detailed piping work, and a playful expression.",
-    details: "Rich chocolate fudge cake filled with dark chocolate ganache and chocolate buttercream coating.",
-    priceRange: "$75 - $110",
-    tiers: 1,
-    shape: "Circle",
-    flavor: "Chocolate",
-    frosting: "Buttercream",
-    rating: 4.8,
-  },
-  {
-    id: "pastel-dream",
-    title: "Pastel Dream Tiers",
-    category: "Wedding",
-    image: weddingCake,
-    description: "A stunning 2-tiered cake with smooth pastel pink gradients, edible gold leaf, and floating baby's breath details.",
-    details: "Lemon blueberry cake layered with white chocolate mousse and premium lemon curd filling.",
-    priceRange: "$180 - $260",
-    tiers: 2,
-    shape: "Circle",
-    flavor: "Lemon",
-    frosting: "Buttercream",
-    rating: 4.9,
-  },
-  {
-    id: "magical-unicorn",
-    title: "Magical Unicorn",
-    category: "Cute Cake",
-    image: cuteCake,
-    description: "Enchanting golden horn cake, complete with a colorful pastel piped mane, cute eyelashes, and whimsical colors.",
-    details: "Classic confetti sponge filled with rich vanilla cream and vanilla-crush fillings.",
-    priceRange: "$80 - $120",
-    tiers: 1,
-    shape: "Circle",
-    flavor: "Vanilla",
-    frosting: "Buttercream",
-    rating: 5.0,
-  },
-  {
-    id: "chocolate-overload",
-    title: "Chocolate Overload",
-    category: "Birthday",
-    image: birthdayCake,
-    description: "A chocolate lover's absolute dream, loaded with chocolate drips, chocolate truffles, and gold flakes.",
-    details: "Triple chocolate sponge layered with Belgian chocolate ganache and chocolate shavings.",
-    priceRange: "$70 - $100",
-    tiers: 1,
-    shape: "Circle",
-    flavor: "Chocolate",
-    frosting: "Fondant",
-    rating: 4.7,
-  },
-];
+import { galleryItems } from "../data/gallery";
+
+
 
 const Gallery = () => {
   const navigate = useNavigate();
@@ -100,7 +14,7 @@ const Gallery = () => {
   const [selectedCake, setSelectedCake] = useState(null);
   const [likes, setLikes] = useState({});
 
-  const categories = ["All", "Birthday", "Wedding", "Cute Cake"];
+  const categories = ["All", "Birthday", "Celebration", "Cupcake"];
 
   const handleLike = (e, id) => {
     e.stopPropagation();

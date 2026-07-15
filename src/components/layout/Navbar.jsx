@@ -17,7 +17,7 @@ const Navbar = () => {
     <header className="sticky top-0 z-20 bg-[#FBF9F1]/90 backdrop-blur-md border-b border-[#eeded8] shadow-sm">
       <div className="flex items-center justify-between gap-4 px-5 py-4 max-w-7xl mx-auto">
         <NavLink to="/" className="font-heading text-xl font-bold text-[#864e5a] flex items-center gap-2 hover:scale-105 transition-transform duration-300">
-          <span className="text-2xl">🎂</span>
+      
           <span>Kuya Jon's Cakes</span>
         </NavLink>
 

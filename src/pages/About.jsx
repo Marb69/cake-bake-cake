@@ -99,11 +99,11 @@ const About = () => {
         {/* Fun Stats */}
         <div className="bg-white/60 backdrop-blur-xs rounded-3xl p-8 border border-soft shadow-soft grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
           <div>
-            <p className="font-heading text-4xl font-extrabold text-[#864e5a]">500+</p>
+            <p className="font-heading text-4xl font-extrabold text-[#864e5a]">50+</p>
             <p className="text-gray-600 text-xs mt-1 uppercase font-semibold tracking-wider">Cakes Baked</p>
           </div>
           <div>
-            <p className="font-heading text-4xl font-extrabold text-[#74593f]">400+</p>
+            <p className="font-heading text-4xl font-extrabold text-[#74593f]">45+</p>
             <p className="text-gray-600 text-xs mt-1 uppercase font-semibold tracking-wider">Happy Clients</p>
           </div>
           <div>
@@ -111,7 +111,7 @@ const About = () => {
             <p className="text-gray-600 text-xs mt-1 uppercase font-semibold tracking-wider">Average Rating</p>
           </div>
           <div>
-            <p className="font-heading text-4xl font-extrabold text-[#74593f]">50+</p>
+            <p className="font-heading text-4xl font-extrabold text-[#74593f]">10+</p>
             <p className="text-gray-600 text-xs mt-1 uppercase font-semibold tracking-wider">Flavor Combos</p>
           </div>
         </div>

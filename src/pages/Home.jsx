@@ -2,10 +2,8 @@ import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { ArrowRight, CakeIcon, Heart, Clock, Truck } from "lucide-react";
 
-import heroImage from "../assets/image/hero_img.png";
-import birthdayCake from "../assets/image/birthday_cake.png";
-import weddingCake from "../assets/image/wedding_cake.png";
-import cuteCake from "../assets/image/cute_cake.png";
+import { cakes } from "../data/images";
+import heroImage from "../assets/image/hero_img.png"
 
 const useElementOnScreen = (options) => {
   const containerRef = useRef(null);
@@ -214,7 +212,7 @@ const Home = () => {
                 </div>
                 <div className="p-4 bg-white rounded-[2rem] shadow-soft border border-soft group-hover:-translate-y-1.5 transition-transform duration-300">
                   <img
-                    src={birthdayCake}
+                    src={cakes.birthday_cake_1}
                     alt="Celebration Sparkle"
                     className="w-full rounded-2xl object-cover aspect-square"
                   />
@@ -230,16 +228,16 @@ const Home = () => {
                 className="relative my-5 flex-none w-[80vw] md:w-auto cursor-pointer group"
               >
                 <div className="bg-[#FFB7C5] text-rose-950 font-semibold px-5 py-1 text-[.9em] rounded-2xl absolute -right-3 -rotate-12 -top-3 z-10 shadow-md">
-                  Wedding
+                 Graduation
                 </div>
                 <div className="p-4 bg-white rounded-[2rem] shadow-soft border border-soft group-hover:-translate-y-1.5 transition-transform duration-300">
                   <img
-                    src={weddingCake}
+                    src={cakes.cake_1}
                     alt="Everlasting Love"
                     className="w-full rounded-2xl object-cover aspect-square"
                   />
                   <p className="text-black font-heading font-bold text-center mt-4 mb-2 text-[1.25em] group-hover:text-[#864e5a] transition-colors">
-                    Everlasting Love
+                    Congratulatory
                   </p>
                 </div>
               </div>
@@ -254,12 +252,12 @@ const Home = () => {
                 </div>
                 <div className="p-4 bg-white rounded-[2rem] shadow-soft border border-soft group-hover:-translate-y-1.5 transition-transform duration-300">
                   <img
-                    src={cuteCake}
+                    src={cakes.cup_cake_1}
                     alt="Cuddly Confection"
                     className="w-full rounded-2xl object-cover aspect-square"
                   />
                   <p className="text-black font-heading font-bold text-center mt-4 mb-2 text-[1.25em] group-hover:text-[#864e5a] transition-colors">
-                    Cuddly Confection
+                    Whimsical Treats
                   </p>
                 </div>
               </div>
