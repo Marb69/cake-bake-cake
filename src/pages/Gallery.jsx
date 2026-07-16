@@ -117,6 +117,7 @@ const Gallery = () => {
                     src={item.image}
                     alt={item.title}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    loading="lazy"
                   />
                   {/* Category label */}
                   <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-xs px-3.5 py-1 rounded-full text-xs font-bold text-[#864e5a] shadow-xs">

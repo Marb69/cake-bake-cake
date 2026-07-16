@@ -1,13 +1,14 @@
-import { RouterProvider } from 'react-router-dom'
-import router from './app/router'
+import { RouterProvider } from "react-router-dom";
+import router from "./app/router";
+import { Analytics } from "@vercel/analytics/react";
 
 const App = () => {
   return (
-  
-    
-    
-    <RouterProvider router={router} />
-  )
-}
+    <>
+      <RouterProvider router={router} />
+      <Analytics/>
+    </>
+  );
+};
 
-export default App
+export default App;
